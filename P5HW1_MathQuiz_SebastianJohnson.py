@@ -31,8 +31,8 @@ def main():
     while keep_going =='y':
 
         choose = int(input('Enter 1, 2, or 3 to continue: '))
-        value1 = random.randint(1, 1000)
-        value2 = random.randint(1, 1000)
+        value1 = random.randint(1, 100)
+        value2 = random.randint(1, 100)
         sum =(value1 + value2)
         remainder =(value1 - value2)
 
@@ -43,10 +43,27 @@ def main():
              if answer1 == sum:
                  print('Congratulations', name,' that is correct')
                  playAgain = input('Would you like to play again? (y/n): ')
-                 if playAgain == 'y':
-                     print(value1)
-                     print(value2)
-                     answer1 = int(input('What is the sum of the values displayed?: '))
+                 keep_going ='j'
+                 while keep_going =='j':
+                     if playAgain == 'y':
+                         value1 = random.randint(1, 100)
+                         value2 = random.randint(1, 100)
+                         print(value1)
+                         print(value2)
+                         answer1 = int(input('What is the sum of the values displayed?: '))
+                     if  answer1 == sum:
+                         print('Congratulations', name, ' that is correct')
+                     else:
+                         print('Exiting program...')
+                 keep_going = input('Press any key to exit')
+
+
+
+
+
+
+
+
 
                  else:
                      print('Exiting program...')
